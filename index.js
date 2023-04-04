@@ -10,6 +10,7 @@ const cartRoute = require("./routes/cartRoute");
 const orderRoute = require("./routes/orderRoute");
 const categoryRoute = require("./routes/categoryRoute");
 const authRoute = require("./routes/authRoute");
+const favoriteRoute = require("./routes/favoriteRoute");
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/categories", categoryRoute);
+app.use("/api/favotites", favoriteRoute);
 
 app.listen(process.env.PORT || 5000, () => {
     console.log("SERVER running PORT:", process.env.PORT);
